@@ -1,0 +1,36 @@
+body { margin: 0;}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+#game {
+    width: 800px;
+    background-image: url('./img/level1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 800px;
+    position: relative;
+}
+
+.pixel {
+    background-image: url('./img/a.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.tree {
+    border: solid red 2px;
+    left: 590px;
+    top:290px;
+    width: 100px;
+    height: 125px;
+    position: absolute;
+
+}
