@@ -1,4 +1,9 @@
-body { margin: 0;}
+* { 
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 
 #container {
     height: 100vh;
@@ -17,20 +22,20 @@ body { margin: 0;}
 }
 
 .pixel {
+    border: solid blueviolet 1px;
     background-image: url('./img/a.gif');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     position: absolute;
 }
 
-.tree {
+/* #tree1 {
     border: solid red 2px;
-    left: 590px;
-    top:290px;
-    width: 100px;
-    height: 125px;
+    left: 155px;
+    top: 390px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-
-}
+} */
