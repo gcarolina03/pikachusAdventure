@@ -25,6 +25,7 @@
 
 #board {
     position: relative;
+    display: flex;
 }
 
 .pixel {
@@ -35,6 +36,8 @@
     height: 50px;
     width: 50px;
     position: absolute;
+    left: 330px;
+    top: 665px;
 }
 
 .interface {
@@ -73,4 +76,15 @@
     width: 85px;
     height: 135px;
     position: absolute;
+}
+
+#cofre1 {
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    background-image: url('/img/cofre_crrado.png');
+    align-content: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    left: 500px;
 }
