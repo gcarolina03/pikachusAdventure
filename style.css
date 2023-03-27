@@ -10,6 +10,10 @@
     display: flex;
     justify-content: center;
     background-color: black;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    
 }
 
 #game {
@@ -18,6 +22,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 800px;
+
     position: relative;
 }
 
@@ -29,6 +34,37 @@
     height: 80px;
     width: 80px;
     position: absolute;
+}
+
+.interface {
+    width:800px;
+    height: 80px;
+    background-color: chartreuse;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+#life{
+    background-color: darkred;
+    width: 80px;
+    height:80px ;
+
+}
+#timer{
+    background-color: aqua;
+    width: 80px;
+    height: 80px;
+
+}
+#key{
+    background-color: darkorange;
+    width: 80px;
+    height: 80px;
+
 }
 
 /* #tree1 {
