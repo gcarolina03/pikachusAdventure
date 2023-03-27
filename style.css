@@ -4,29 +4,26 @@
     padding: 0;
 }
 
-
 #container {
     height: 100vh;
     display: flex;
     justify-content: center;
     background-color: black;
-    flex-direction: column;
-    justify-content:flex-end;
-    align-items: center;
-    
 }
 
 #game {
     width: 710px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#board>img {
+    width: 100%;
+    height: 100%;
 }
 
 #board {
-    width: 100%;
-    background-image: url('./img/level1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90%;
     position: relative;
 }
 
@@ -71,9 +68,9 @@
 
 #tree1 {
     border: solid red 2px;
-    left: 555px;
-    top: 130px;
-    width: 35px;
-    height: 40px;
+    left: 155px;
+    top: 370px;
+    width: 85px;
+    height: 135px;
     position: absolute;
 }
