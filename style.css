@@ -38,6 +38,7 @@
     position: absolute;
     left: 330px;
     top: 665px;
+    z-index: 2;
 }
 
 .interface {
@@ -78,6 +79,7 @@
     background-size:contain;
     background-repeat: no-repeat;
     left: 500px;
+    
 }
 
 #cofre2{
