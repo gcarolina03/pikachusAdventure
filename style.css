@@ -26,7 +26,6 @@
 #board {
     display: flex;
     position: relative;
-    display: flex;
 }
 
 .pixel {
@@ -70,6 +69,16 @@
 
 }
 
+#cofre1 {
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    background-image: url('/img/cofre_crrado.png');
+    align-content: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    left: 500px;
+}
 
 #cofre2{
     width: 40px;
@@ -97,22 +106,11 @@
 
 }
 
-#tree1 {
+/* #tree1 {
     border: solid red 2px;
-    left: 155px;
-    top: 370px;
-    width: 85px;
-    height: 135px;
+    left: 405px;
+    top: 645px;
+    width: 75px;
+    height: 50px;
     position: absolute;
-}
-
-#cofre1 {
-    width: 40px;
-    height: 25px;
-    position: absolute;
-    background-image: url('/img/cofre_crrado.png');
-    align-content: center;
-    background-size:contain;
-    background-repeat: no-repeat;
-    left: 500px;
-}
+} */
