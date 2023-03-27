@@ -17,12 +17,16 @@
 }
 
 #game {
-    width: 800px;
+    width: 710px;
+    height: 100%;
+}
+
+#board {
+    width: 100%;
     background-image: url('./img/level1.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 800px;
-
+    background-size: cover;
+    height: 90%;
     position: relative;
 }
 
@@ -31,14 +35,14 @@
     background-image: url('./img/a.gif');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     position: absolute;
 }
 
 .interface {
-    width:800px;
-    height: 80px;
+    width: 100%;
+    height: 9%;
     background-color: chartreuse;
     background-size: contain;
     position: relative;
@@ -50,28 +54,26 @@
 
 #life{
     background-color: darkred;
-    width: 80px;
-    height:80px ;
-
+    width: 15%;
+    height: 100%
 }
 #timer{
     background-color: aqua;
-    width: 80px;
-    height: 80px;
-
+    width: 15%;    
+    height: 100%
 }
 #key{
     background-color: darkorange;
-    width: 80px;
-    height: 80px;
+    width: 15%;    
+    height: 100%
 
 }
 
-/* #tree1 {
+#tree1 {
     border: solid red 2px;
-    left: 155px;
-    top: 390px;
-    width: 40px;
+    left: 555px;
+    top: 130px;
+    width: 35px;
     height: 40px;
     position: absolute;
-} */
+}
