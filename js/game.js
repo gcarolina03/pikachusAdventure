@@ -1,4 +1,3 @@
-
 function Game() {
     this.timer = 300;
     this.key = 0;
@@ -7,7 +6,7 @@ function Game() {
     this.obstacles = [];
 }
 
-Game.prototype.start = function() {
+Game.prototype.start = function () {
     //NEW CHARACTER 
     let jhonny = new Character();
 
@@ -33,7 +32,7 @@ Game.prototype.start = function() {
     });
 };
 
-Game.prototype.nextLevel = function() {
+Game.prototype.nextLevel = function () {
     this.obstacles = [];
 
     if (this.level === 2) {
