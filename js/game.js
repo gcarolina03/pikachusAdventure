@@ -4,13 +4,14 @@ function Game() {
     this.level = 1;
     this.exit = {};
     this.obstacles = [];
+    this.chests = [];
 }
 
 Game.prototype.start = function () {
     //NEW CHARACTER 
     let jhonny = new Character();
 
-    //Trees
+    //TREES
     this.obstacles.push(new Obstacles(115, 85, 85, 240));
     this.obstacles.push(new Obstacles(155, 370, 85, 135));
     this.obstacles.push(new Obstacles(95, 505, 75, 125));
@@ -20,9 +21,14 @@ Game.prototype.start = function () {
     this.obstacles.push(new Obstacles(400, 580, 220, 70));
     this.obstacles.push(new Obstacles(405, 645, 75, 50))
 
-    //Water
+    //WATER
     this.obstacles.push(new Obstacles(205, 165, 70, 160));
     this.obstacles.push(new Obstacles(455, 315, 140, 135));
+
+    //CHESTS
+    this.chests = document.querySelectorAll(".chestClose")
+
+    const chestKey = Math.ceil(Math.random() * 3);
 
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {

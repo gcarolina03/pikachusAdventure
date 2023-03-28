@@ -86,42 +86,54 @@
 }
 
 #cofre1 {
-    width: 40px;
-    height: 25px;
-    position: absolute;
-    background-image: url('/img/cofre_crrado.png');
-    align-content: center;
-    background-size:contain;
-    background-repeat: no-repeat;
-    left: 500px;
-    
+    width: 30px;
+    height: 28px;
+    left: 520px;
+    top: 10px;
+    border: solid red;
 }
 
-#cofre2{
-    width: 40px;
-    height: 25px;
-    background-image: url('img/cofre_crrado.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    align-content: center;
+#cofre2 {
+    width: 30px;
+    height: 28px;
     top: 470px;
     left: 115px;
+    border: solid red;
 
 }
 
-#cofre3{
-    width: 40px;
-    height: 25px;
+#cofre3 {
+    width: 30px;
+    height: 28px;
+    border: solid red;
+    left: 500px;
+    top: 650px;
+}
+
+.chestClose {
     background-image: url('img/cofre_crrado.png');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
     align-content: center;
-    left: 500px;
-    top: 650px;
-
 }
+
+.chestOpen {
+    background-image: url('img/cofre_abierto.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    align-content: center;
+}
+
+/* #tree1 {
+    border: solid red 2px;
+    left: 115px;
+    top: 470px;
+    width: 30px;
+    height: 28px;
+    position: absolute;
+} */
 
 /* #tree1 {
     border: solid red 2px;
