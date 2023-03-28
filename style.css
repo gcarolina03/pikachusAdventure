@@ -29,7 +29,6 @@
 }
 
 .pixelright {
-    border: solid blueviolet 1px;
     background-image: url('./img/pikachu_corriendo.gif');
     background-repeat: no-repeat;
     background-size: contain;
@@ -43,7 +42,6 @@
 }
 
 .pixeleft {
-    border: solid blueviolet 1px;
     background-image: url('./img/pikachu_corriendo.gif');
     background-repeat: no-repeat;
     background-size: contain;
@@ -102,26 +100,22 @@
 }
 
 #cofre1 {
-    width: 30px;
-    height: 28px;
+    width: 25px;
+    height: 29px;
     left: 520px;
-    top: 10px;
-    border: solid red;
+    top: 20px;
 }
 
 #cofre2 {
-    width: 30px;
-    height: 28px;
+    width: 25px;
+    height: 29px;
     top: 470px;
     left: 115px;
-    border: solid red;
-
 }
 
 #cofre3 {
-    width: 30px;
-    height: 28px;
-    border: solid red;
+    width: 25px;
+    height: 29px;
     left: 500px;
     top: 650px;
 }

@@ -5,6 +5,7 @@ function Game() {
     this.exit = {};
     this.obstacles = [];
     this.chests = [];
+    this.chestKey = Math.floor(Math.random() * 3);
 }
 
 Game.prototype.start = function () {
@@ -28,8 +29,6 @@ Game.prototype.start = function () {
     //CHESTS
     this.chests = document.querySelectorAll(".chestClose")
 
-    const chestKey = Math.ceil(Math.random() * 3);
-
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {
         jhonny.updateCharacterPosition(e.code);
@@ -47,6 +46,18 @@ Game.prototype.nextLevel = function () {
             .querySelector("#board>img")
             .setAttribute("src", "./img/level2.png");
     }
+}
+
+Game.prototype.makeChestClickable = function () {
+    
+    /* this. .addEventListener('click', (event) => {
+        
+    }) */
+  
+}
+
+Game.prototype.checkChest= function (chest) {
+    
 }
 
 
