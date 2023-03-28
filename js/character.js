@@ -1,7 +1,8 @@
 function Character() {
     this.pos = { x: 330, y: 665 };
     this.direction = "";
-    this.collision = false;
+    this.collision = ""
+
 }
 
 Character.prototype.updateCharacterDirection = function (direction) {
@@ -27,88 +28,57 @@ Character.prototype.updateCharacterDirection = function (direction) {
     }
 }
 
-const pixelMove = document.getElementById("player")
 //-------UPDATE CHARACTER POSITION
 Character.prototype.updateCharacterPosition = function (key) {
-    //CHECK COLLISION OBSTACLES
-    this.checkCollision(key);
-    this.collisionChest();
+    const pixel = document.getElementById("player");
+    //CHECK DIRECTION
+    this.updateCharacterDirection(key);
+   
     //MOVE IF COLLISION IS FALSE
-    if (!this.collision) {
         switch (this.direction) {
             case "left":
-                if (this.pos.x > 0) { this.pos.x -= 5;
-                    pixelMove.classList.add("pixeleft");
-                    pixelMove.classList.remove("pixelright");}
+                if (this.pos.x > 0) { this.pos.x -= 3;
+                    pixel.classList.add("pixeleft");
+                    pixel.classList.remove("pixelright");}
                     break
             case "right":
-                if (this.pos.x + 50 < 710) { this.pos.x += 5; 
-                    pixelMove.classList.add("pixelright");
-                    pixelMove.classList.remove("pixeleft");}
+                if (this.pos.x + 50 < 710) { this.pos.x += 3; 
+                    pixel.classList.add("pixelright");
+                    pixel.classList.remove("pixeleft");}
                 break
             case "up":
-                if (this.pos.y > 0) { this.pos.y -= 5; }
-                break
+                if (this.pos.y > 0) { this.pos.y -= 3; }
+                break;
             case "down":
-                if (this.pos.y + 50 < 714) { this.pos.y += 5; }
-                break
+                if (this.pos.y + 50 < 710) { this.pos.y += 3; }
+                break;
         }
-    };
+
+    //CHECK COLLISION OBSTACLES
+    this.checkCollision();
 
     //-------UPDATE POSITION
-    const pixel = document.getElementById("player");
     pixel.style.left = this.pos.x + "px";
     pixel.style.top = this.pos.y + "px";
-    this.collision = false;
 }
 
 //CHECK IF CHARACTER COLLIDES WITH OBSTACLES
-Character.prototype.checkCollision = function (key) {
-    //CHECK DIRECTION
-    this.updateCharacterDirection(key);
-    let separator = 10;
+Character.prototype.checkCollision = function () {
 
-    game.obstacles.forEach(function (obs) {
-        console.log("foreach")
+    game.obstacles.forEach( function(obs) {
+        const overlapX = (this.pos.x - 3 <= (obs.left + obs.width)) && ((this.pos.x + 50) >= obs.left);
+        const overlapY = (this.pos.y - 3 <= (obs.top + obs.height)) && ((this.pos.y + 50) >= obs.top);
+        const isColliding = overlapX && overlapY;
 
-        //check for overlap in x-axis and y-axis
-        const overlapX = (this.pos.x <= (obs.left + obs.width)) && ((this.pos.x + 50) >= obs.left);
-        const overlapY = (this.pos.y <= (obs.top + obs.height)) && ((this.pos.y + 50) >= obs.top);
-
-        //---Calculates the minimum distance between both axles to avoid collision
-        if (overlapX && overlapY) {
-
-            //-----CHECK DIRECTION TO MOVE THE CHARACTER TO
-            /* (this.direction === 'left') ? this.pos.x += separator
-                : (this.direction === 'right') ? this.pos.x -= separator
-                    : (this.direction === 'down') ? this.pos.y -= separator
-                        : (this.direction === 'up') ? this.pos.y += separator
-                            : null; */
-
-            //---collision to true
-            this.collision = true;
+        if (isColliding) {
+            // ADJUST POSITION TO NOT OVERLAP WITH OBSTACLE (Hasta las narices, me vuelvo a los arrays)
+            (this.direction === "left") ? this.pos.x = obs.left + obs.width + 3
+            : (this.direction === "right") ? this.pos.x = obs.left - 50 - 3
+            : (this.direction === "up") ? this.pos.y = obs.top + obs.height + 3
+            : (this.direction === "down") ? this.pos.y = obs.top - 50 - 3
+            : null;
         }
     }.bind(this))
 }
 
 //IN PROGRESS (NOT WORKING)
-Character.prototype.collisionChest = function () {
-    game.chests.forEach(function (chest) {
-        console.log((chest.style))
-
-        //check for overlap in x-axis and y-axis
-        const overlapX = (this.pos.x < (parseInt(chest.style.left.replace('px', ''), 10) + (parseInt(chest.style.width.replace('px', ''), 10)))) &&
-            ((this.pos.x + 50) > (parseInt(chest.style.left.replace('px', ''), 10)))
-        const overlapY = (this.pos.y < ((parseInt(chest.style.top.replace('px', ''), 10) + (parseInt(chest.style.height.replace('px', ''), 10))))) &&
-            ((this.pos.y + 50) > (parseInt(chest.style.left.replace('px', ''), 10)))
-
-        if (overlapX && overlapY) {
-            console.log("overlap chest")
-            chest.addEventListener("click", function (e) {
-                console.log(e)
-            })
-        }
-
-
-    }.bind(this))
-}
