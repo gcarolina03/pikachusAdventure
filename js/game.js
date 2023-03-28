@@ -1,8 +1,7 @@
 function Game() {
-    this.timer = 300;
+    this.timeLeft = setInterval(this.updateTimer, 5000);
     this.key = 0;
     this.level = 1;
-    this.exit = {};
     this.obstacles = [];
     this.chests = [];
     this.chestKey = Math.floor(Math.random() * 3);
@@ -11,6 +10,7 @@ function Game() {
 Game.prototype.start = function () {
     //NEW CHARACTER 
     let jhonny = new Character();
+   /*  updateTimer(); */
 
     //TREES
     this.obstacles.push(new Obstacles(115, 85, 85, 240));
@@ -27,7 +27,9 @@ Game.prototype.start = function () {
     this.obstacles.push(new Obstacles(455, 315, 140, 135));
 
     //CHESTS
-    this.chests = document.querySelectorAll(".chestClose")
+    this.chests = document.querySelectorAll(".chestClose");
+
+    //EXIT
 
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {
@@ -39,6 +41,9 @@ Game.prototype.start = function () {
 
 Game.prototype.nextLevel = function () {
     this.obstacles = [];
+    this.key = 0;
+    this.obstacles = [];
+    this.chests = [];
 
     if (this.level === 2) {
         //CHANGES BG
@@ -48,16 +53,20 @@ Game.prototype.nextLevel = function () {
     }
 }
 
-Game.prototype.makeChestClickable = function () {
-    
-    /* this. .addEventListener('click', (event) => {
-        
-    }) */
-  
+//TIMER IN PROGRESS ( NOT WORKING)
+/* Game.prototype.updateTimer = function () {
+    this.timeLeft --;
+    if (timeLeft >= 0)
+        document
+            .getElementById("countdown")
+            .innerText(this.timeLeft);
+    else {
+        gameOver();
+    }
 }
 
-Game.prototype.checkChest= function (chest) {
-    
-}
-
+Game.prototype.gameOver = function () {
+    // This cancels the setInterval, so the updateTimer stops getting called
+    cancelInterval(timer);
+} */
 

@@ -82,20 +82,46 @@ Character.prototype.checkCollision = function () {
     }.bind(this))
 }
 
-//IN PROGRESS (NOT WORKING)
+//CHECK CHEST
 Character.prototype.checkChest = function () {
 
-    game.chests.forEach( function(c) {
-        let chest = getComputedStyle(c);
+    for (let i = 0; i < game.chests.length; i++) {
+        let chest = getComputedStyle(game.chests[i]);
 
         const overlapX = (this.pos.x - 3 <= (parseInt(chest.left) + parseInt(chest.width))) && ((this.pos.x + 50) >= parseInt(chest.left));
         const overlapY = (this.pos.y - 3 <= (parseInt(chest.top) + parseInt(chest.height))) && ((this.pos.y + 50) >= parseInt(chest.top));
         const isColliding = overlapX && overlapY;
 
+        console.log("pokeball"+i);
+        console.log(game.chestKey);
         if (isColliding) {
-            // ADJUST POSITION TO NOT OVERLAP WITH OBSTACLE (Hasta las narices, me vuelvo a los arrays)
-            c.classList.remove("chestClose");
-            c.classList.add("chestOpen");
+            if (i === game.chestKey) {
+                document.getElementById("exit").classList.add("exit");
+
+                game.key = 1
+
+                document
+                .getElementById("keycount")
+                .innerText = game.key;
+            }
+            game.chests[i].classList.remove("chestClose");
+            game.chests[i].classList.add("chestOpen");
+            console.log("keys:"+game.key);
         }
-    }.bind(this))
+    }
+        
 }
+
+//IN PROGRESS (NOT WORKING)
+/* Character.prototype.exit = function() {
+    
+
+    const overlapX = (this.pos.x - 3 <= (parseInt(exit.left) + parseInt(exit.width))) && ((this.pos.x + 50) >= parseInt(exit.left));
+    const overlapY = (this.pos.y - 3 <= (parseInt(exit.top) + parseInt(exit.height))) && ((this.pos.y + 50) >= parseInt(exit.top));
+    const isColliding = overlapX && overlapY;
+
+    if (isColliding) {
+        game.level++;
+        console.log(game.nextLevel)
+    }
+} */
