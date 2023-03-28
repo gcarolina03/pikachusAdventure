@@ -42,9 +42,9 @@
 }
 
 .interface {
+    border-style: outset;
     width: 100%;
     height: 9%;
-    background-color: chartreuse;
     background-size: contain;
     position: relative;
     display: flex;
@@ -54,18 +54,33 @@
 }
 
 #life{
-    background-color: darkred;
+    border-style: none outset none outset;
+    display: flex;
     width: 15%;
-    height: 100%
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    
 }
 #timer{
-    background-color: aqua;
-    width: 15%;    
-    height: 100%
+    border-style: none outset none outset;
+    display: flex;
+    flex-direction: row;
+    width: 20%;    
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
 }
-#key{
-    background-color: darkorange;
-    width: 15%;    
+#keys{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content:normal;
+    border-style: none outset none outset;
+    width: 20%;    
     height: 100%
 
 }
@@ -116,3 +131,58 @@
     height: 50px;
     position: absolute;
 } */
+
+#heart1{
+    background-image: url('/img/pngwing.com\(1\).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+
+
+}
+
+#heart2{
+    background-image: url('/img/pngwing.com\(1\).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+
+}
+
+#heart3{
+    background-image: url('/img/pngwing.com\(1\).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+
+
+}
+
+#countdown{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    font-size:x-large;
+}
+
+#key{
+    background-image: url('/img/pixel-key.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+}
+
+#keycount{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    font-size:x-large;
+}
