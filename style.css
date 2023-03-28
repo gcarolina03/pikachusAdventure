@@ -28,9 +28,9 @@
     position: relative;
 }
 
-.pixel {
+.pixelright {
     border: solid blueviolet 1px;
-    background-image: url('./img/a.gif');
+    background-image: url('./img/pikachu_corriendo.gif');
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
@@ -39,7 +39,23 @@
     left: 330px;
     top: 665px;
     z-index: 2;
+    transform: scaleX();
 }
+
+.pixeleft {
+    border: solid blueviolet 1px;
+    background-image: url('./img/pikachu_corriendo.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 330px;
+    top: 665px;
+    z-index: 2;
+    transform: scaleX(-1);
+}
+
 
 .interface {
     border-style: outset;

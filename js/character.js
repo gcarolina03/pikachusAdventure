@@ -27,6 +27,7 @@ Character.prototype.updateCharacterDirection = function (direction) {
     }
 }
 
+const pixelMove = document.getElementById("player")
 //-------UPDATE CHARACTER POSITION
 Character.prototype.updateCharacterPosition = function (key) {
     //CHECK COLLISION OBSTACLES
@@ -36,10 +37,14 @@ Character.prototype.updateCharacterPosition = function (key) {
     if (!this.collision) {
         switch (this.direction) {
             case "left":
-                if (this.pos.x > 0) { this.pos.x -= 5; }
-                break
+                if (this.pos.x > 0) { this.pos.x -= 5;
+                    pixelMove.classList.add("pixeleft");
+                    pixelMove.classList.remove("pixelright");}
+                    break
             case "right":
-                if (this.pos.x + 50 < 710) { this.pos.x += 5; }
+                if (this.pos.x + 50 < 710) { this.pos.x += 5; 
+                    pixelMove.classList.add("pixelright");
+                    pixelMove.classList.remove("pixeleft");}
                 break
             case "up":
                 if (this.pos.y > 0) { this.pos.y -= 5; }
@@ -51,7 +56,7 @@ Character.prototype.updateCharacterPosition = function (key) {
     };
 
     //-------UPDATE POSITION
-    const pixel = document.querySelector(".pixel");
+    const pixel = document.getElementById("player");
     pixel.style.left = this.pos.x + "px";
     pixel.style.top = this.pos.y + "px";
     this.collision = false;
