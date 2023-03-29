@@ -5,9 +5,35 @@ function Game() {
     this.obstacles = [];
     this.chests = [];
     this.chestKey = Math.floor(Math.random() * 3);
+
+    //elementos principales en el menu
+    this.menu = document.getElementById('menu');
+    this.level = document.getElementById('level');
+    this.container = document.getElementById('container')
+    this.game = document.getElementById('game');
+    this.credits = document.getElementById('credits');
 }
 
 Game.prototype.start = function () {
+    console.log('inicio')
+    //quita menu y cambia el fondo del contenedor
+    this.menu.style.display = "none";
+    this.container.style.background = "black"
+    //muestra el juego y el nivel
+    this.game.style.display = "flex"
+    this.level.style.display = "block"
+
+
+    //Iniciado el juego, a los dos segundos inicia el juego
+    setTimeout(() => {
+        this.play();
+    }, 2000);
+}
+
+Game.prototype.play = function () {
+    //hide level div
+    this.level.style.display = "none";
+
     //NEW CHARACTER 
     let jhonny = new Character();
    /*  updateTimer(); */
@@ -27,7 +53,7 @@ Game.prototype.start = function () {
     this.obstacles.push(new Obstacles(455, 315, 140, 135));
 
     //CHESTS
-    this.chests = document.querySelectorAll(".chestClose");
+    this.chests = document.querySelectorAll(".pokeClose");
 
     //EXIT
 

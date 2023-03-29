@@ -38,13 +38,13 @@ Character.prototype.updateCharacterPosition = function (key) {
         switch (this.direction) {
             case "left":
                 if (this.pos.x > 0) { this.pos.x -= 4;
-                    pixel.classList.add("pixeleft");
-                    pixel.classList.remove("pixelright");}
+                    pixel.classList.add("pixeLeft");
+                    pixel.classList.remove("pixelRight");}
                     break
             case "right":
                 if (this.pos.x + 50 < 710) { this.pos.x += 4; 
-                    pixel.classList.add("pixelright");
-                    pixel.classList.remove("pixeleft");}
+                    pixel.classList.add("pixelRight");
+                    pixel.classList.remove("pixeLeft");}
                 break
             case "up":
                 if (this.pos.y > 0) { this.pos.y -= 4; }
@@ -104,8 +104,8 @@ Character.prototype.checkChest = function () {
                 .getElementById("keycount")
                 .innerText = game.key;
             }
-            game.chests[i].classList.remove("chestClose");
-            game.chests[i].classList.add("chestOpen");
+            game.chests[i].classList.remove("pokeClose");
+            game.chests[i].classList.add("pokeOpen");
             console.log("keys:"+game.key);
         }
     }

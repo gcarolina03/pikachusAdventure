@@ -9,13 +9,19 @@
     display: flex;
     justify-content: center;
     background-color: black;
+    background: url('./img/bg-menu.gif');
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
 }
 
+/* ------------------- BOARD GAME */
 #game {
+    display: none;
     width: 710px;
     height: 100%;
-    display: flex;
     flex-direction: column;
+    position: absolute;
 }
 
 #board>img {
@@ -28,8 +34,9 @@
     position: relative;
 }
 
-.pixelright {
-    background-image: url('./img/pikachu_corriendo.gif');
+/* -------------CHARACTER(DINAMIC) */
+.pixelRight {
+    background-image: url('./img/pixel/pikachu_move.gif');
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
@@ -41,8 +48,8 @@
     transform: scaleX();
 }
 
-.pixeleft {
-    background-image: url('./img/pikachu_corriendo.gif');
+.pixeLeft {
+    background-image: url('./img/pixel/pikachu_move.gif');
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
@@ -54,49 +61,9 @@
     transform: scaleX(-1);
 }
 
-.interface {
-    border-style: outset;
-    width: 100%;
-    height: 9%;
-    background-size: contain;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#life{
-    border-style: none outset none outset;
-    display: flex;
-    width: 15%;
-    height: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-#timer{
-    border-style: none outset none outset;
-    display: flex;
-    flex-direction: row;
-    width: 20%;    
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    
-}
-#keys{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content:normal;
-    border-style: none outset none outset;
-    width: 20%;    
-    height: 100%
-}
-
+/* ------------------OBJECTS */
 #bird {
-    background-image: url('./img/pidgey.gif');
+    background-image: url('./img/objects/pidgey.gif');
     background-repeat: no-repeat;
     background-size: cover;
     height: 40px;
@@ -106,29 +73,45 @@
     top: 150px;
 }
 
-#cofre1 {
+#poke1 {
     width: 25px;
     height: 29px;
     left: 520px;
     top: 20px;
 }
 
-#cofre2 {
+#poke2 {
     width: 25px;
     height: 29px;
     top: 470px;
     left: 115px;
 }
 
-#cofre3 {
+#poke3 {
     width: 25px;
     height: 29px;
     left: 500px;
     top: 650px;
 }
 
+.pokeClose {
+    background-image: url('./img/objects/close_pokeball.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    align-content: center;
+}
+
+.pokeOpen {
+    background-image: url('./img/objects/open_pokeball.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    align-content: center;
+}
+
 .exit {
-    background-image: url("/img/Pokemon_Center_Exterior.png") ;
+    background-image: url("/img/objects/center.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 90px;
@@ -136,22 +119,6 @@
     position: absolute;
     left: 230px;
     top: 0px;
-}
-
-.chestClose {
-    background-image: url('img/cofre_crrado.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    align-content: center;
-}
-
-.chestOpen {
-    background-image: url('img/cofre_abierto.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    align-content: center;
 }
 
 /* #tree1 {
@@ -163,8 +130,51 @@
     position: absolute;
 } */
 
+/* ---------------------INTERFACE  */
+.interface {
+    border-style: outset;
+    width: 100%;
+    height: 9%;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#life {
+    border-style: none outset none outset;
+    display: flex;
+    width: 15%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer {
+    border-style: none outset none outset;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#keys {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: normal;
+    border-style: none outset none outset;
+    width: 20%;
+    height: 100%
+}
+
 #heart1{
-    background-image: url('/img/pngwing.com\(1\).png');
+    background-image: url('./img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -172,7 +182,7 @@
 }
 
 #heart2{
-    background-image: url('/img/pngwing.com\(1\).png');
+    background-image: url('./img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -180,7 +190,7 @@
 }
 
 #heart3{
-    background-image: url('/img/pngwing.com\(1\).png');
+    background-image: url('./img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -197,7 +207,7 @@
 }
 
 #key{
-    background-image: url('/img/pixel-key.png');
+    background-image: url('/img/objects/pixel-key.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 50%;

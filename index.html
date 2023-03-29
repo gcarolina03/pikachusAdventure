@@ -11,19 +11,26 @@
     <script src="./js/character.js" defer></script>
     <script src="./js/obstacles.js" defer></script>
     <script src="./js/index.js" defer></script>
+    <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="container">
+        <div id="menu">
+            <div id="start_game"></div>
+            <div id="start"></div>
+            <div id="menu_credits"></div>
+        </div>
+        <div id="level"></div>
         <div id="game">
             <div id="board">
                 <img src="./img/level1.png" alt="">
-                <div id="player" class="pixelright"></div>
+                <div id="player" class="pixelRight"></div>
                 <div id="tree1"></div>
                 <div id="bird"></div>
-                <div id="cofre1" class="chestClose"></div>
-                <div id="cofre2" class="chestClose"></div>
-                <div id="cofre3" class="chestClose"></div>
+                <div id="poke1" class="pokeClose"></div>
+                <div id="poke2" class="pokeClose"></div>
+                <div id="poke3" class="pokeClose"></div>
                 <div id="exit"></div>
             </div>
             <div class="interface">
@@ -40,6 +47,9 @@
                     <div id="keycount">00</div>
                 </div>
             </div>
+        </div>
+        <div id="credits">
+            <span>MEQUIEROMORIR</span>
         </div>
     </div>
 </body>

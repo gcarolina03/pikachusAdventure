@@ -1,0 +1,67 @@
+#menu {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#start_game {
+    margin-top: 30px;
+    height: 20%;
+    width: 80%;
+    background-image: url('./img/letters/start_letter.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#start {
+    margin-top: 250px;
+    height: 20%;
+    width: 40%;
+    background-image: url('./img/letters/play_letter.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#start:hover {
+    background-image: url('./img/letters/play_letter_hover.png');
+}
+
+#menu_credits {
+    margin-top: 20px;
+    height: 10%;
+    width: 30%;
+    background-image: url('./img/letters/credits_letter.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#menu_credits:hover {
+    background-image: url('./img/letters/credits_letter_hover.png');
+}
+
+#level {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: 0;
+    background-image: url('./img/letters/level1.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+#credits {
+    color: white;
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 68%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
