@@ -60,7 +60,7 @@ Character.prototype.updateCharacterPosition = function (key) {
         }
 
     //CHECK OBSTACLES COLLISION
-    /* this.checkCollision(); */
+    this.checkCollision();
 
     //CHECK POKEBALL COLLISION
     this.checkPokeball();
