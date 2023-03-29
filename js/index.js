@@ -4,8 +4,8 @@ var game = new Game();
 document
     .querySelector("#start")
     .addEventListener('click', function (e) {
-        game.start()
-        e.stopPropagation()
+        game.start();
+        e.stopPropagation();
     })
 
 //--------------credits
@@ -14,10 +14,10 @@ document
     .addEventListener('click', function (e) {
         //remove menu and change container background
         game.menu.style.display = "none";
-        game.container.style.background = "black"
+        game.container.style.background = "black";
         //show credits
         game.credits.style.display = "flex";
-        e.stopPropagation()
+        e.stopPropagation();
     })
 
 document
@@ -25,10 +25,10 @@ document
     .addEventListener('click', function (e) {
         //show menu and change container to bg img
         game.menu.style.display = "flex";
-        game.container.style.background = "url('./img/bg-menu.gif')"
+        game.container.style.background = "url('./img/bg-menu.gif')";
         //hide credits
         game.credits.style.display = "none";
-        e.stopPropagation()
+        e.stopPropagation();
     })
 
-game.startSound()
+game.startSound();

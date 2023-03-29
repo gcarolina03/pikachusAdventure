@@ -1,32 +1,34 @@
 function Game() {
-    this.timeLeft = setInterval(this.updateTimer, 5000);
+    this.timer;
+    this.timeLeft = 60;
     this.key = 0;
-    this.level = 1;
     this.obstacles = [];
     this.chests = [];
     this.chestKey = Math.floor(Math.random() * 3);
     this.backgroundMusic = new Audio('../music/pokemonGame.mp3')
     this.introMusic = new Audio('../music/pokemon-opening.mp3')
-    //elementos principales en el menu
+   
+    //MENU
     this.menu = document.getElementById('menu');
     this.level = document.getElementById('level');
     this.container = document.getElementById('container')
     this.game = document.getElementById('game');
+    this.game_over = document.getElementById('game_over');
+    this.win = document.getElementById('win');
     this.credits = document.getElementById('credits');
 }
 
-
 Game.prototype.start = function () {
     console.log('inicio')
-    //quita menu y cambia el fondo del contenedor
+    //remove menu and change container background
     this.menu.style.display = "none";
     this.container.style.background = "black"
-    //muestra el juego y el nivel
+    //shows the game board and the level
     this.game.style.display = "flex"
     this.level.style.display = "block"
     this.introMusic.play();
 
-    //Iniciado el juego, a los dos segundos inicia el juego
+    //The game starts after ten seconds.
     setTimeout(() => {
         this.play();
     }, 10000);
@@ -38,10 +40,12 @@ Game.prototype.play = function () {
     this.introMusic.pause();
     this.backgroundMusic.play();
  
+    //----TIMER
+    this.timer = setInterval(()=>{this.updateTimer()}, 1000);
+    this.updateTimer();
 
     //NEW CHARACTER 
     let jhonny = new Character();
-   /*  updateTimer(); */
 
     //TREES
     this.obstacles.push(new Obstacles(115, 85, 85, 240));
@@ -65,49 +69,27 @@ Game.prototype.play = function () {
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {
         jhonny.updateCharacterPosition(e.code);
-        console.log(jhonny.pos.x);
-        console.log(jhonny.pos.y);
     });
 };
 
-Game.prototype.nextLevel = function () {
-    this.obstacles = [];
-    this.key = 0;
-    this.obstacles = [];
-    this.chests = [];
-
-    if (this.level === 2) {
-        //CHANGES BG
-        document
-            .querySelector("#board>img")
-            .setAttribute("src", "./img/level2.png");
-    }
+//TIMER
+Game.prototype.updateTimer = function () {
+    this.timeLeft--;
+    (this.timeLeft >= 0) ? document.querySelector("#timer>span").innerText = this.timeLeft : this.gameOver();
 }
 
-//TIMER IN PROGRESS ( NOT WORKING)
-/* Game.prototype.updateTimer = function () {
-    this.timeLeft --;
-    if (timeLeft >= 0)
-        document
-            .getElementById("countdown")
-            .innerText(this.timeLeft);
-    else {
-        gameOver();
-    }
-}*/
-
+//GAME OVER INTERFACE WHEN TIMER IS 0
 Game.prototype.gameOver = function () {
     // This cancels the setInterval, so the updateTimer stops getting called
-    cancelInterval(timer);
+    clearInterval(this.timer);
+    console.log("end")
+    //show game over
+    this.game_over.style.display = "block"
 } 
 
-/* Game.prototype.startSound = function() {
-    var sonido = document.getElementById("pokemonOpening");
-    document.body.addEventListener("mousemove", function () {
-        sonido.muted = false;
-        sonido.play()
-    })
-    
+//YOU WIN INTERFACE
+Game.prototype.youWin = function() {
+    clearInterval(this.timer);
+    //show you win
+    this.win.style.display = "block"
 }
- */
-
