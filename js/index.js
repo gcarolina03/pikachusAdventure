@@ -1,5 +1,4 @@
-let game = new Game();
-game.introMusic.play()
+var game = new Game();
 
 //start game
 document
@@ -7,7 +6,6 @@ document
     .addEventListener('click', function (e) {
         game.start()
         e.stopPropagation()
-        game.backgroundMusic.play()
     })
 
 //--------------credits
@@ -32,3 +30,5 @@ document
         game.credits.style.display = "none";
         e.stopPropagation()
     })
+
+game.startSound()

@@ -1,53 +1,47 @@
 function Game() {
-    this.timer;
-    this.timeLeft = 99999999;
-    this.key = 1;
+    this.timeLeft = setInterval(this.updateTimer, 5000);
+    this.key = 0;
     this.level = 1;
     this.obstacles = [];
     this.chests = [];
     this.chestKey = Math.floor(Math.random() * 3);
     this.backgroundMusic = new Audio('../music/pokemonGame.mp3')
     this.introMusic = new Audio('../music/pokemon-opening.mp3')
-   
-
     //elementos principales en el menu
     this.menu = document.getElementById('menu');
     this.level = document.getElementById('level');
     this.container = document.getElementById('container')
     this.game = document.getElementById('game');
-    this.game_over = document.getElementById('game_over');
-    this.win = document.getElementById('win');
     this.credits = document.getElementById('credits');
 }
 
+
 Game.prototype.start = function () {
     console.log('inicio')
-    //remove menu and change container background
+    //quita menu y cambia el fondo del contenedor
     this.menu.style.display = "none";
     this.container.style.background = "black"
-    //shows the game board and the level
+    //muestra el juego y el nivel
     this.game.style.display = "flex"
     this.level.style.display = "block"
-    
+    this.introMusic.play();
 
-    //The game starts after two seconds.
+    //Iniciado el juego, a los dos segundos inicia el juego
     setTimeout(() => {
         this.play();
-    }, 1000);
+    }, 10000);
 }
 
 Game.prototype.play = function () {
     //hide level div
     this.level.style.display = "none";
+    this.introMusic.pause();
+    this.backgroundMusic.play();
  
-
-    //----TIMER
-    this.timer = setInterval(()=>{this.updateTimer()}, 1000);
-    this.updateTimer();
-    console.log(timer);
 
     //NEW CHARACTER 
     let jhonny = new Character();
+   /*  updateTimer(); */
 
     //TREES
     this.obstacles.push(new Obstacles(115, 85, 85, 240));
@@ -65,6 +59,8 @@ Game.prototype.play = function () {
 
     //CHESTS
     this.chests = document.querySelectorAll(".pokeClose");
+
+    //EXIT
 
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {
@@ -89,30 +85,29 @@ Game.prototype.nextLevel = function () {
 }
 
 //TIMER IN PROGRESS ( NOT WORKING)
-Game.prototype.updateTimer = function () {
-    this.timeLeft--;
-    if (this.timeLeft >= 0)
+/* Game.prototype.updateTimer = function () {
+    this.timeLeft --;
+    if (timeLeft >= 0)
         document
-            .querySelector("#timer>span")
-            .innerText = this.timeLeft;
+            .getElementById("countdown")
+            .innerText(this.timeLeft);
     else {
-        this.gameOver();
+        gameOver();
     }
-
-}
+}*/
 
 Game.prototype.gameOver = function () {
     // This cancels the setInterval, so the updateTimer stops getting called
-    clearInterval(this.timer);
-    console.log("end")
-    //show you lose
-    this.game_over.style.display = "block"
+    cancelInterval(timer);
 } 
-/* 
-Game.prototype.startSound = function() {
+
+/* Game.prototype.startSound = function() {
     var sonido = document.getElementById("pokemonOpening");
     document.body.addEventListener("mousemove", function () {
         sonido.muted = false;
         sonido.play()
     })
-} */
+    
+}
+ */
+
