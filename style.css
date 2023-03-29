@@ -206,14 +206,13 @@
     justify-content: center;
 }
 
-#keys {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: normal;
-    border-style: none outset none outset;
-    width: 20%;
-    height: 100%
+#timer>span {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    font-size: x-large;
 }
 
 #heart1{
@@ -240,20 +239,22 @@
     height: 40px;
 }
 
-#timer>span{
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    width: 50%;
-    height: 50%;
-    font-size:x-large;
+#keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none outset none outset;
+    width: 20%;
+    height: 100%;
 }
 
 #key{
-    background-image: url('/img/objects/pixel-key.png');
+    background-image: url('/img/objects/medalkey.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 50%;
+    align-content: center;
+    margin-left: 10px;
+    width: 30%;
     height: 50%;
 }
 
