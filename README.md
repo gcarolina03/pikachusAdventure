@@ -1,6 +1,6 @@
 # Pikachu's Adventure: A Zelda-Inspired Game
 
-![Screenshot of Pikachu's Adventure](screenshot.png)
+![Screenshot of Pikachu's Adventure](./img/pikachusAdventure.png)
 
 Pikachu's Adventure is a game inspired by The Legend of Zelda (NES) and set in a Pokemon environment. The objective of the game is to find a badge hidden in one of three Pokeball chests on the map and then make it to the Pokemon Center within one minute to win.
 
