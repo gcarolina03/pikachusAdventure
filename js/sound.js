@@ -1,4 +1,0 @@
-function reproducirSonido(pokemonOpening) {
-    
-}
-

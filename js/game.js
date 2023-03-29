@@ -9,13 +9,13 @@ function Game() {
     this.introMusic = new Audio('../music/pokemon-opening.mp3')
    
     //MENU
-    this.menu = document.getElementById('menu');
-    this.level = document.getElementById('level');
-    this.container = document.getElementById('container')
-    this.game = document.getElementById('game');
-    this.game_over = document.getElementById('game_over');
-    this.win = document.getElementById('win');
-    this.credits = document.getElementById('credits');
+    this.menu = document.querySelector('#menu');
+    this.level = document.querySelector('#level');
+    this.container = document.querySelector('#container')
+    this.game = document.querySelector('#game');
+    this.game_over = document.querySelector('#game_over');
+    this.win = document.querySelector('#win');
+    this.credits = document.querySelector('#credits');
 }
 
 Game.prototype.start = function () {
@@ -63,8 +63,6 @@ Game.prototype.play = function () {
 
     //CHESTS
     this.chests = document.querySelectorAll(".pokeClose");
-
-    //EXIT
 
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {

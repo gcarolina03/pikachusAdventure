@@ -31,4 +31,5 @@ document
         e.stopPropagation();
     })
 
+//------ START SOUND
 game.startSound();

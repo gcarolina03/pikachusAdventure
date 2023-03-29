@@ -21,7 +21,7 @@
     z-index: 3;
     position: absolute;
     top: 0;
-    background-image: url('./img/explication.png');
+    background-image: url('./img/screen/explication.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@
     z-index: 3;
     position: absolute;
     top: 0;
-    background-image: url('./img/youlose.png');
+    background-image: url('./img/screen/youlose.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@
     z-index: 3;
     position: absolute;
     top: 0;
-    background-image: url('./img/youwin.png');
+    background-image: url('./img/screen/youwin.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -72,6 +72,19 @@
 #board {
     display: flex;
     position: relative;
+}
+
+#empty_pokeball {
+    display: none;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    background-image: url('./img/screen/empty_poke.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
 }
 
 /* -------------CHARACTER(DINAMIC) */
