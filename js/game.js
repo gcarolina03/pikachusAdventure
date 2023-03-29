@@ -5,6 +5,9 @@ function Game() {
     this.obstacles = [];
     this.chests = [];
     this.chestKey = Math.floor(Math.random() * 3);
+    this.backgroundMusic = new Audio('../music/pokemonGame.mp3')
+    this.introMusic = new Audio('../music/pokemon-opening.mp3')
+   
 
     //elementos principales en el menu
     this.menu = document.getElementById('menu');
@@ -22,7 +25,7 @@ Game.prototype.start = function () {
     //muestra el juego y el nivel
     this.game.style.display = "flex"
     this.level.style.display = "block"
-
+    
 
     //Iniciado el juego, a los dos segundos inicia el juego
     setTimeout(() => {
@@ -33,6 +36,7 @@ Game.prototype.start = function () {
 Game.prototype.play = function () {
     //hide level div
     this.level.style.display = "none";
+ 
 
     //NEW CHARACTER 
     let jhonny = new Character();
@@ -94,5 +98,15 @@ Game.prototype.nextLevel = function () {
 Game.prototype.gameOver = function () {
     // This cancels the setInterval, so the updateTimer stops getting called
     cancelInterval(timer);
-} */
+} 
+
+Game.prototype.startSound = function() {
+    var sonido = document.getElementById("pokemonOpening");
+    document.body.addEventListener("mousemove", function () {
+        sonido.muted = false;
+        sonido.play()
+    })
+    
+}
+*/
 
