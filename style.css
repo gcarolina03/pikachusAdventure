@@ -62,7 +62,7 @@
 }
 
 /* ------------------OBJECTS */
-#bird {
+#pidgey {
     background-image: url('./img/objects/pidgey.gif');
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,6 +71,19 @@
     position: absolute;
     left: 580px;
     top: 150px;
+}
+
+#gyarados {
+    background-image: url('./img/objects/redgyarados.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 195px;
+    top: 200px;
+    transform: scaleX(-1);
+    transform: rotate(45deg);
 }
 
 #poke1 {
