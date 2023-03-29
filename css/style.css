@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     background-color: black;
-    background: url('./img/bg-menu.gif');
+    background: url('../img/bg-menu.gif');
     background-size: contain;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@
     z-index: 3;
     position: absolute;
     top: 0;
-    background-image: url('./img/screen/explication.png');
+    background-image: url('../img/screen/explication.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@
     z-index: 3;
     position: absolute;
     top: 0;
-    background-image: url('./img/screen/youlose.png');
+    background-image: url('../img/screen/youlose.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@
     z-index: 3;
     position: absolute;
     top: 0;
-    background-image: url('./img/screen/youwin.png');
+    background-image: url('../img/screen/youwin.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@
     z-index: 3;
     position: absolute;
     top: 0;
-    background-image: url('./img/screen/empty_poke.png');
+    background-image: url('../img/screen/empty_poke.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@
 
 /* -------------CHARACTER(DINAMIC) */
 .pixelRight {
-    background-image: url('./img/pixel/pikachu_move.gif');
+    background-image: url('../img/pixel/pikachu_move.gif');
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
@@ -102,7 +102,7 @@
 }
 
 .pixeLeft {
-    background-image: url('./img/pixel/pikachu_move.gif');
+    background-image: url('../img/pixel/pikachu_move.gif');
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
@@ -116,7 +116,7 @@
 
 /* ------------------OBJECTS */
 #pidgey {
-    background-image: url('./img/objects/pidgey.gif');
+    background-image: url('../img/objects/pidgey.gif');
     background-repeat: no-repeat;
     background-size: cover;
     height: 40px;
@@ -127,7 +127,7 @@
 }
 
 #gyarados {
-    background-image: url('./img/objects/redgyarados.gif');
+    background-image: url('../img/objects/redgyarados.gif');
     background-repeat: no-repeat;
     background-size: cover;
     height: 70px;
@@ -161,7 +161,7 @@
 }
 
 .pokeClose {
-    background-image: url('./img/objects/close_pokeball.png');
+    background-image: url('../img/objects/close_pokeball.png');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -169,7 +169,7 @@
 }
 
 .pokeOpen {
-    background-image: url('./img/objects/open_pokeball.png');
+    background-image: url('../img/objects/open_pokeball.png');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -177,7 +177,7 @@
 }
 
 .exit {
-    background-image: url("/img/objects/center.png");
+    background-image: url("../img/objects/center.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 90px;
@@ -229,7 +229,7 @@
 }
 
 #heart1{
-    background-image: url('./img/objects/heart.png');
+    background-image: url('../img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -237,7 +237,7 @@
 }
 
 #heart2{
-    background-image: url('./img/objects/heart.png');
+    background-image: url('../img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -245,7 +245,7 @@
 }
 
 #heart3{
-    background-image: url('./img/objects/heart.png');
+    background-image: url('../img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -262,7 +262,7 @@
 }
 
 #key{
-    background-image: url('/img/objects/medalkey.png');
+    background-image: url('../img/objects/medalkey.png');
     background-size: contain;
     background-repeat: no-repeat;
     align-content: center;

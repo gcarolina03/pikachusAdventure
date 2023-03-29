@@ -19,7 +19,6 @@ function Game() {
 }
 
 Game.prototype.start = function () {
-    console.log('inicio')
     //remove menu and change container background
     this.menu.style.display = "none";
     this.container.style.background = "black"
@@ -80,7 +79,6 @@ Game.prototype.updateTimer = function () {
 Game.prototype.gameOver = function () {
     // This cancels the setInterval, so the updateTimer stops getting called
     clearInterval(this.timer);
-    console.log("end")
     //show game over
     this.game_over.style.display = "block"
 } 

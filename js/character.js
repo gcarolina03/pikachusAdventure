@@ -111,7 +111,6 @@ Character.prototype.checkPokeball = function() {
                     .querySelector("#keycount")
                     .innerText = game.key;
             } else {
-                console.log("not collision")
                 document
                     .querySelector("#empty_pokeball")
                     .style.display = "block";
