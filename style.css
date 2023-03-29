@@ -15,6 +15,46 @@
     align-items: center;
 }
 
+/* ------------------- LOSE, WIN, INTRO*/
+#level{
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: 0;
+    background-image: url('./img/explication.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+#game_over{
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: 0;
+    background-image: url('./img/youlose.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+#win{
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: 0;
+    background-image: url('./img/youwin.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
 /* ------------------- BOARD GAME */
 #game {
     display: none;
@@ -210,7 +250,7 @@
     height: 40px;
 }
 
-#countdown{
+#timer>span{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;

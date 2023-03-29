@@ -1,6 +1,7 @@
 function Game() {
-    this.timeLeft = setInterval(this.updateTimer, 5000);
-    this.key = 0;
+    this.timer;
+    this.timeLeft = 99999999;
+    this.key = 1;
     this.level = 1;
     this.obstacles = [];
     this.chests = [];
@@ -14,23 +15,25 @@ function Game() {
     this.level = document.getElementById('level');
     this.container = document.getElementById('container')
     this.game = document.getElementById('game');
+    this.game_over = document.getElementById('game_over');
+    this.win = document.getElementById('win');
     this.credits = document.getElementById('credits');
 }
 
 Game.prototype.start = function () {
     console.log('inicio')
-    //quita menu y cambia el fondo del contenedor
+    //remove menu and change container background
     this.menu.style.display = "none";
     this.container.style.background = "black"
-    //muestra el juego y el nivel
+    //shows the game board and the level
     this.game.style.display = "flex"
     this.level.style.display = "block"
     
 
-    //Iniciado el juego, a los dos segundos inicia el juego
+    //The game starts after two seconds.
     setTimeout(() => {
         this.play();
-    }, 2000);
+    }, 1000);
 }
 
 Game.prototype.play = function () {
@@ -38,9 +41,13 @@ Game.prototype.play = function () {
     this.level.style.display = "none";
  
 
+    //----TIMER
+    this.timer = setInterval(()=>{this.updateTimer()}, 1000);
+    this.updateTimer();
+    console.log(timer);
+
     //NEW CHARACTER 
     let jhonny = new Character();
-   /*  updateTimer(); */
 
     //TREES
     this.obstacles.push(new Obstacles(115, 85, 85, 240));
@@ -58,8 +65,6 @@ Game.prototype.play = function () {
 
     //CHESTS
     this.chests = document.querySelectorAll(".pokeClose");
-
-    //EXIT
 
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {
@@ -84,29 +89,30 @@ Game.prototype.nextLevel = function () {
 }
 
 //TIMER IN PROGRESS ( NOT WORKING)
-/* Game.prototype.updateTimer = function () {
-    this.timeLeft --;
-    if (timeLeft >= 0)
+Game.prototype.updateTimer = function () {
+    this.timeLeft--;
+    if (this.timeLeft >= 0)
         document
-            .getElementById("countdown")
-            .innerText(this.timeLeft);
+            .querySelector("#timer>span")
+            .innerText = this.timeLeft;
     else {
-        gameOver();
+        this.gameOver();
     }
+
 }
 
 Game.prototype.gameOver = function () {
     // This cancels the setInterval, so the updateTimer stops getting called
-    cancelInterval(timer);
+    clearInterval(this.timer);
+    console.log("end")
+    //show you lose
+    this.game_over.style.display = "block"
 } 
-
+/* 
 Game.prototype.startSound = function() {
     var sonido = document.getElementById("pokemonOpening");
     document.body.addEventListener("mousemove", function () {
         sonido.muted = false;
         sonido.play()
     })
-    
-}
-*/
-
+} */

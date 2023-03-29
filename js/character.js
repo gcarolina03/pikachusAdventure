@@ -55,7 +55,7 @@ Character.prototype.updateCharacterPosition = function (key) {
         }
 
     //CHECK COLLISION OBSTACLES
-    this.checkCollision();
+    /* this.checkCollision(); */
     this.checkChest();
 
     //-------UPDATE POSITION
@@ -113,8 +113,8 @@ Character.prototype.checkChest = function () {
 }
 
 //IN PROGRESS (NOT WORKING)
-/* Character.prototype.exit = function() {
-    
+Character.prototype.exit = function() {
+    let exit = document.get
 
     const overlapX = (this.pos.x - 3 <= (parseInt(exit.left) + parseInt(exit.width))) && ((this.pos.x + 50) >= parseInt(exit.left));
     const overlapY = (this.pos.y - 3 <= (parseInt(exit.top) + parseInt(exit.height))) && ((this.pos.y + 50) >= parseInt(exit.top));
@@ -124,4 +124,4 @@ Character.prototype.checkChest = function () {
         game.level++;
         console.log(game.nextLevel)
     }
-} */
+}

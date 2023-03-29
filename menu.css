@@ -28,6 +28,7 @@
     background-image: url('./img/letters/play_letter_hover.png');
 }
 
+/* --------credits */
 #menu_credits {
     margin-top: 20px;
     height: 10%;
@@ -36,58 +37,29 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-
 #menu_credits:hover {
     background-image: url('./img/letters/credits_letter_hover.png');
-}
-
-#level {
-    z-index: 3;
-    display: none;
-    position: absolute;
-    top: 0;
-    background-image: url('./img/letters/level1.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-}
-
-#lose {
-    z-index: 3;
-    display: none;
-    position: absolute;
-    top: 0;
-    background-image: url('./img/letters/level1.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-}
-
-#win {
-    z-index: 3;
-    display: none;
-    position: absolute;
-    top: 0;
-    background-image: url('./img/letters/level1.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
 }
 
 #credits {
     color: white;
     display: none;
-    position: absolute;
+    position: relative;
     top: 0;
     height: 100vh;
-    width: 68%;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
+}
+
+#jhonny {
+    background-image: url('./img/jhonny.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 200px;
+    top: 100px;
+    width: 300px;
+    height: 280px;
+    position: absolute;
 }
