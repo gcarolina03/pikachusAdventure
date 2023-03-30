@@ -25,7 +25,7 @@ document
     .addEventListener('click', function (e) {
         //show menu and change container to bg img
         game.menu.style.display = "flex";
-        game.container.style.background = "url('../img/bg-menu.gif')";
+        game.container.style.background = "url('./img/bg-menu.gif')";
         //hide credits
         game.credits.style.display = "none";
         e.stopPropagation();
