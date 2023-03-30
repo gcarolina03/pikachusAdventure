@@ -156,17 +156,17 @@ Character.prototype.checkEnemy = function() {
         if (this.hearts === 3) {
             let heart = document.querySelector("#heart1");
             this.hearts--;
-            heart.style.backgroundImage = "url('../img/objects/heartoff.png')";
+            heart.style.backgroundImage = "url('./img/objects/heartoff.png')";
             this.pos = { x: 330, y: 665 };
         } else if (this.hearts === 2) {
             let heart = document.querySelector("#heart2");
             this.hearts--;
-            heart.style.backgroundImage = "url('../img/objects/heartoff.png')";
+            heart.style.backgroundImage = "url('./img/objects/heartoff.png')";
             this.pos = { x: 330, y: 665 };
         } else {
             let heart = document.querySelector("#heart3");
             this.hearts--;
-            heart.style.backgroundImage = "url('../img/objects/heartoff.png')";
+            heart.style.backgroundImage = "url('./img/objects/heartoff.png')";
             game.gameOver();
         }
     }
