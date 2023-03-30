@@ -62,6 +62,7 @@
     height: 100%;
     flex-direction: column;
     position: absolute;
+    justify-content: center;
 }
 
 #board>img {

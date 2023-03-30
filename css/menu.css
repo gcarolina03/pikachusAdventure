@@ -42,24 +42,18 @@
 }
 
 #credits {
-    color: white;
     display: none;
-    position: relative;
-    top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
+    background-size: contain;
+    position: relative;
+    background-image: url('../img/credits.png');
 }
 
-#pikachu {
-    background-image: url('../img/pixel/pikachu.gif');
-    background-repeat: no-repeat;
-    background-size: contain;
-    left: 200px;
-    top: 100px;
-    width: 300px;
-    height: 280px;
+#exitCredits {
+    left: 720px;
+    bottom: 50px;
+    width: 100px;
+    height: 35px;
     position: absolute;
 }

@@ -14,20 +14,17 @@ document
     .addEventListener('click', function (e) {
         //remove menu and change container background
         game.menu.style.display = "none";
-        game.container.style.background = "black";
         //show credits
-        game.credits.style.display = "flex";
+        game.credits.style.display = "block";
         e.stopPropagation();
     })
 
 document
-    .querySelector('#credits>span')
+    .querySelector('#exitCredits')
     .addEventListener('click', function (e) {
         //show menu and change container to bg img
         game.menu.style.display = "flex";
-        game.container.style.background = "url('./img/bg-menu.gif')";
         //hide credits
         game.credits.style.display = "none";
         e.stopPropagation();
     })
-

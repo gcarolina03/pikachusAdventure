@@ -2,7 +2,6 @@ function Character() {
     this.hearts = 3;
     this.pos = { x: 330, y: 665 };
     this.direction = "";
-    this.collision = ""
 }
 
 Character.prototype.updateCharacterDirection = function (direction) {
