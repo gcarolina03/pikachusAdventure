@@ -92,7 +92,7 @@
     background-image: url('../img/pixel/pikachu_move.gif');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 50px;
+    height: 37px;
     width: 50px;
     position: absolute;
     left: 330px;
@@ -105,7 +105,7 @@
     background-image: url('../img/pixel/pikachu_move.gif');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 50px;
+    height: 37px;
     width: 50px;
     position: absolute;
     left: 330px;
@@ -127,7 +127,7 @@
 }
 
 #gyarados {
-    background-image: url('../img/objects/redgyarados.gif');
+    background-image: url('../img/objects/magikarp.gif');
     background-repeat: no-repeat;
     background-size: cover;
     height: 70px;
@@ -187,6 +187,28 @@
     top: 0px;
 }
 
+/* -------ENEMY */
+@keyframes rocket {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -112px;
+    }
+}
+
+#enemy {
+    background-image: url('../img/objects/teamrocket2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 270px;
+    top: 260px;
+    width: 28px;
+    height: 40px;
+    animation: rocket 1s steps(4) infinite;
+}
 /* ---------------------INTERFACE  */
 .interface {
     border-style: outset;

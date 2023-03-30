@@ -1,10 +1,11 @@
 function Game() {
     this.timer;
-    this.timeLeft = 60;
+    this.timeLeft = 90;
     this.key = 0;
     this.obstacles = [];
     this.chests = [];
     this.chestKey = Math.floor(Math.random() * 3);
+    this.enemy;
     this.backgroundMusic = new Audio('../music/pokemonGame.mp3')
     this.introMusic = new Audio('../music/pokemon-opening.mp3')
    
@@ -27,10 +28,10 @@ Game.prototype.start = function () {
     this.level.style.display = "block"
     this.introMusic.play();
 
-    //The game starts after ten seconds.
+    //The game starts after seven seconds.
     setTimeout(() => {
         this.play();
-    }, 10000);
+    }, 7000);
 }
 
 Game.prototype.play = function () {
@@ -47,21 +48,26 @@ Game.prototype.play = function () {
     let jhonny = new Character();
 
     //TREES
-    this.obstacles.push(new Obstacles(115, 85, 85, 240));
-    this.obstacles.push(new Obstacles(155, 370, 85, 135));
-    this.obstacles.push(new Obstacles(95, 505, 75, 125));
-    this.obstacles.push(new Obstacles(370, 10, 130, 115));
-    this.obstacles.push(new Obstacles(495, 120, 150, 130));
-    this.obstacles.push(new Obstacles(365, 405, 30, 30));
-    this.obstacles.push(new Obstacles(400, 580, 220, 70));
-    this.obstacles.push(new Obstacles(405, 645, 75, 50))
+    this.obstacles.push(new Obstacles(125, 90, 80, 230));
+    this.obstacles.push(new Obstacles(160, 375, 70, 120));
+    this.obstacles.push(new Obstacles(105, 515, 55, 105));
+    this.obstacles.push(new Obstacles(375, 10, 115, 110));
+    this.obstacles.push(new Obstacles(500, 125, 130, 115));
+    this.obstacles.push(new Obstacles(365, 405, 25, 25));
+    this.obstacles.push(new Obstacles(410, 585, 205, 50));
+    this.obstacles.push(new Obstacles(405, 645, 65, 50))
 
     //WATER
-    this.obstacles.push(new Obstacles(205, 165, 70, 160));
-    this.obstacles.push(new Obstacles(455, 315, 140, 135));
+    this.obstacles.push(new Obstacles(200, 175, 68, 145));
+    this.obstacles.push(new Obstacles(460, 320, 128, 125));
 
     //CHESTS
     this.chests = document.querySelectorAll(".pokeClose");
+
+    //ENEMY
+    this.enemy = new Enemys(270, 1, 200);
+    this.enemy.TimerId = setInterval(()=>{this.enemy.move()}, this.enemy.speed);
+
 
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {
