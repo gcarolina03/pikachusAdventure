@@ -3,8 +3,8 @@ function Game() {
     this.timeLeft = 90;
     this.key = 0;
     this.obstacles = [];
-    this.chests = [];
-    this.chestKey = Math.floor(Math.random() * 3);
+    this.pokeballs = [];
+    this.medal = Math.floor(Math.random() * 3);
     this.enemy;
     this.backgroundMusic = new Audio('./music/pokemonGame.mp3')
     this.introMusic = new Audio('./music/pokemon-opening.mp3')
@@ -45,7 +45,7 @@ Game.prototype.play = function () {
     this.updateTimer();
 
     //NEW CHARACTER 
-    let jhonny = new Character();
+    let pikachu = new Character();
 
     //TREES
     this.obstacles.push(new Obstacles(125, 90, 80, 230));
@@ -61,8 +61,8 @@ Game.prototype.play = function () {
     this.obstacles.push(new Obstacles(200, 175, 68, 145));
     this.obstacles.push(new Obstacles(460, 320, 128, 125));
 
-    //CHESTS
-    this.chests = document.querySelectorAll(".pokeClose");
+    //pokeballs
+    this.pokeballs = document.querySelectorAll(".pokeClose");
 
     //ENEMY
     this.enemy = new Enemys(270, 1, 200);
@@ -71,7 +71,7 @@ Game.prototype.play = function () {
 
     //-------LISTENER KEY
     window.addEventListener('keydown', function (e) {
-        jhonny.updateCharacterPosition(e.code);
+        pikachu.updateCharacterPosition(e.code);
     });
 };
 

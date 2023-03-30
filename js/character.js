@@ -98,8 +98,8 @@ Character.prototype.checkCollision = function() {
 
 //CHECK CHEST
 Character.prototype.checkPokeball = function() {
-    for (let i = 0; i < game.chests.length; i++) {
-        let chest = getComputedStyle(game.chests[i]);
+    for (let i = 0; i < game.pokeballs.length; i++) {
+        let chest = getComputedStyle(game.pokeballs[i]);
 
         const overlapX = (this.pos.x - 4.5 <= (parseInt(chest.left) + parseInt(chest.width))) && ((this.pos.x + 50) >= parseInt(chest.left));
         const overlapY = (this.pos.y - 4.5 <= (parseInt(chest.top) + parseInt(chest.height))) && ((this.pos.y + 37) >= parseInt(chest.top));
@@ -107,7 +107,7 @@ Character.prototype.checkPokeball = function() {
 
         //IF COLLISION WITH A POKEBALL CHECK IF THE KEY IS INSIDE AND CHANGE IMG TO
         if (isColliding) {
-            if (i === game.chestKey) {
+            if (i === game.medal) {
                 let gyarados = document.querySelector("#gyarados");
                 gyarados.classList.remove("magikarp")
                 gyarados.classList.add("gyarados")
@@ -125,8 +125,8 @@ Character.prototype.checkPokeball = function() {
                     .querySelector("#empty_pokeball")
                     .style.display = "block";
             }
-            game.chests[i].classList.remove("pokeClose");
-            game.chests[i].classList.add("pokeOpen");
+            game.pokeballs[i].classList.remove("pokeClose");
+            game.pokeballs[i].classList.add("pokeOpen");
         };
     };
 };
@@ -145,6 +145,7 @@ Character.prototype.checkExit = function() {
     }
 }
 
+//CHECK COLLISION WITH ENEMY
 Character.prototype.checkEnemy = function() {
     let enemy = document.querySelector("#enemy");
 
@@ -153,6 +154,7 @@ Character.prototype.checkEnemy = function() {
     const isColliding = overlapX && overlapY;
 
     if (isColliding) {
+        //check how many lives are left
         if (this.hearts === 3) {
             let heart = document.querySelector("#heart1");
             this.hearts--;
