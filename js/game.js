@@ -6,8 +6,8 @@ function Game() {
     this.chests = [];
     this.chestKey = Math.floor(Math.random() * 3);
     this.enemy;
-    this.backgroundMusic = new Audio('../music/pokemonGame.mp3')
-    this.introMusic = new Audio('../music/pokemon-opening.mp3')
+    this.backgroundMusic = new Audio('./music/pokemonGame.mp3')
+    this.introMusic = new Audio('./music/pokemon-opening.mp3')
    
     //MENU
     this.menu = document.querySelector('#menu');
