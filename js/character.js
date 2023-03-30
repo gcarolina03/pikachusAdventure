@@ -110,7 +110,7 @@ Character.prototype.checkPokeball = function() {
             if (i === game.chestKey) {
                 document
                     .querySelector("#gyarados")
-                    .style.backgroundImage = "url('../img/objects/redgyarados.gif')";
+                    .style.backgroundImage = "url('./img/objects/redgyarados.gif')";
 
                 document
                     .querySelector("#exit")
