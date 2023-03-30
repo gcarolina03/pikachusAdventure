@@ -8,6 +8,8 @@ Pikachu's Adventure is a game inspired by The Legend of Zelda (NES) and set in a
 
 The game is played from a top-down perspective, similar to The Legend of Zelda. You control Pikachu using either the arrow keys or the WASD keys to move around the map. The objective is to search for the badge hidden in one of three Pokeball chests scattered throughout the map. Once you have found the badge, a Pokemon Center will appear on the map.
 
+While searching for the badge, be careful not to collide with the enemy Pokemon on the map. Each collision with the enemy will cause you to lose a heart. If you lose all three hearts, the game will be over.
+
 You must make it to the Pokemon Center within one minute to win the game. If you fail to find the badge within one minute or fail to make it to the Pokemon Center in time, you will lose the game.
 
 ## Installation
