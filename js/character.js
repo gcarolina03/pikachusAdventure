@@ -108,9 +108,9 @@ Character.prototype.checkPokeball = function() {
         //IF COLLISION WITH A POKEBALL CHECK IF THE KEY IS INSIDE AND CHANGE IMG TO
         if (isColliding) {
             if (i === game.chestKey) {
-                document
-                    .querySelector("#gyarados")
-                    .style.backgroundImage = "url('./img/objects/redgyarados.gif')";
+                let gyarados = document.querySelector("#gyarados");
+                gyarados.classList.remove("magikarp")
+                gyarados.classList.add("gyarados")
 
                 document
                     .querySelector("#exit")
@@ -156,17 +156,20 @@ Character.prototype.checkEnemy = function() {
         if (this.hearts === 3) {
             let heart = document.querySelector("#heart1");
             this.hearts--;
-            heart.style.backgroundImage = "url('img/objects/heartoff.png')";
+            heart.classList.remove("heart");
+            heart.classList.add("heartoff");
             this.pos = { x: 330, y: 665 };
         } else if (this.hearts === 2) {
             let heart = document.querySelector("#heart2");
             this.hearts--;
-            heart.style.backgroundImage = "url('/img/objects/heartoff.png')";
+            heart.classList.remove("heart");
+            heart.classList.add("heartoff");
             this.pos = { x: 330, y: 665 };
         } else {
             let heart = document.querySelector("#heart3");
             this.hearts--;
-            heart.style.backgroundImage = "url('./img/objects/heartoff.png')";
+            heart.classList.remove("heart");
+            heart.classList.add("heartoff");
             game.gameOver();
         }
     }

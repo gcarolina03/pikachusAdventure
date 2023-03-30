@@ -22,8 +22,10 @@ Enemys.prototype.move = function () {
     enemy.style.left = game.enemy.left + 'px';
 
     if (game.enemy.direction === -1) {
-        enemy.style.backgroundImage = "url('./img/objects/teamrocket.png')"
+        enemy.classList.remove("enemy2");
+        enemy.classList.add("enemy1");
     } else {
-        enemy.style.backgroundImage = "url('./img/objects/teamrocket2.png')"
+        enemy.classList.remove("enemy1");
+        enemy.classList.add("enemy2");
     }
 }

@@ -127,7 +127,6 @@
 }
 
 #gyarados {
-    background-image: url('../img/objects/magikarp.gif');
     background-repeat: no-repeat;
     background-size: cover;
     height: 70px;
@@ -137,6 +136,14 @@
     top: 200px;
     transform: scaleX(-1);
     transform: rotate(45deg);
+}
+
+.magikarp {
+    background-image: url('../img/objects/magikarp.gif');
+}
+
+.gyarados {
+    background-image: url('../img/objects/redgyarados.gif');
 }
 
 #poke1 {
@@ -199,15 +206,22 @@
 }
 
 #enemy {
-    background-image: url('../img/objects/teamrocket2.png');
+    position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
     left: 270px;
     top: 260px;
     width: 28px;
     height: 40px;
     animation: rocket 1s steps(4) infinite;
+}
+
+.enemy1 {
+    background-image: url('../img/objects/teamrocket.png');
+}
+
+.enemy2 {
+    background-image: url('../img/objects/teamrocket2.png');
 }
 /* ---------------------INTERFACE  */
 .interface {
@@ -250,8 +264,15 @@
     font-size: x-large;
 }
 
-#heart1{
+.heart {
     background-image: url('../img/objects/heart.png');
+}
+
+.heartoff{
+    background-image: url('../img/objects/heartoff.png');
+}
+
+#heart1{
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
