@@ -86,7 +86,7 @@ Character.prototype.checkCollision = function() {
         const isColliding = overlapX && overlapY;
 
         if (isColliding) {
-            // ADJUST POSITION TO NOT OVERLAP WITH OBSTACLE (Hasta las narices, me vuelvo a los arrays)
+            // ADJUST POSITION TO NOT OVERLAP WITH OBSTACLE
             (this.direction === "left") ? this.pos.x = obs.left + obs.width + 4.5
             : (this.direction === "right") ? this.pos.x = obs.left - 50 - 4.5
             : (this.direction === "up") ? this.pos.y = obs.top + obs.height + 4.5
