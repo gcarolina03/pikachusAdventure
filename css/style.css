@@ -280,7 +280,6 @@
 }
 
 #heart2{
-    background-image: url('../img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -288,7 +287,6 @@
 }
 
 #heart3{
-    background-image: url('../img/objects/heart.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
