@@ -4,7 +4,7 @@ function Game() {
     this.key = 0;
     this.obstacles = [];
     this.pokeballs = [];
-    this.medal = Math.floor(Math.random() * 3);
+    this.medal = 0 /* Math.floor(Math.random() * 3); */
     this.enemy;
     this.backgroundMusic = new Audio('./music/pokemonGame.mp3')
     this.introMusic = new Audio('./music/pokemon-opening.mp3')
