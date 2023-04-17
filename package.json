@@ -1,0 +1,31 @@
+{
+  "name": "pikachusadventure",
+  "version": "1.0.0",
+  "description": "project front-end",
+  "main": "/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcarolina03/pikachusAdventure.git"
+  },
+  "author": "ariadna, juan, carolina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcarolina03/pikachusAdventure/issues"
+  },
+  "homepage": "https://github.com/gcarolina03/pikachusAdventure#readme",
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1"
+  },
+  "eslintConfig": {
+    "globals": {
+      "window": true
+    }
+  }
+}
